@@ -56,9 +56,10 @@ class _WadhuScreenState extends State<WadhuScreen> {
              crossAxisAlignment: CrossAxisAlignment.center,
              mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              SizedBox(height: SizeConfig.screenHeight! * 0.09),
               Container(
-                // color: Colors.red.withOpacity(0.5),
-                height: SizeConfig.screenHeight! * 0.486,
+                 // color: Colors.red.withOpacity(0.5),
+                height: SizeConfig.screenHeight! * 0.35,
                 width: SizeConfig.screenWidth! * 0.8,
                 child: PageView.builder(
                     controller: _controller,

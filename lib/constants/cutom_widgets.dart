@@ -94,9 +94,9 @@ class CustomWidgets {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(title,style: TextStyle(
-                  fontSize: SizeConfig.screenHeight! * 0.03,
+                  fontSize: SizeConfig.screenHeight! * 0.024,
                   fontFamily: 'Gomgom'
-                ),), Text(subTitle,style: TextStyle(fontSize: SizeConfig.screenHeight! * 0.025),)],
+                ),), Text(subTitle,style: TextStyle(fontSize: SizeConfig.screenHeight! * 0.023),)],
             )
           ],
         ),

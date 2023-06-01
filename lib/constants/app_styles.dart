@@ -48,7 +48,7 @@ class AppStyles{
 
   static final stepTitle = TextStyle(
       fontWeight: FontWeight.bold,
-      fontSize: SizeConfig.screenHeight! * 0.035,
+      fontSize: SizeConfig.screenHeight! * 0.027,
       fontFamily: 'Gomgom',
       color: const Color.fromRGBO(94, 25, 4, 1)
   );

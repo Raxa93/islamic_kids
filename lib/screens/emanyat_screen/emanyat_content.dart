@@ -16,26 +16,26 @@ class EmanyatContent extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SizedBox(height: SizeConfig.screenHeight! * 0.085),
+          SizedBox(height: SizeConfig.screenHeight! * 0.072),
           Text(emanyatName,style: TextStyle(
-            fontSize: SizeConfig.screenHeight! * 0.033,
+            fontSize: SizeConfig.screenHeight! * 0.025,
             color: Colors.brown,
             fontFamily: 'Gomgom'
           ),),
-          SizedBox(height: SizeConfig.screenHeight! * 0.1),
+          SizedBox(height: SizeConfig.screenHeight! * 0.05),
           Text(
               textAlign: TextAlign.justify,
               emanyatDua,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-            fontSize: SizeConfig.screenHeight! * 0.04
+            fontSize: SizeConfig.screenHeight! * 0.025
           )),
           SizedBox(height: SizeConfig.screenHeight! * 0.02),
           Text(emanyatUrdu,
             textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.grey,
-                  fontSize: SizeConfig.screenHeight! * 0.03
+                  fontSize: SizeConfig.screenHeight! * 0.025
               )
           ),
           SizedBox(height: SizeConfig.screenHeight! * 0.02),

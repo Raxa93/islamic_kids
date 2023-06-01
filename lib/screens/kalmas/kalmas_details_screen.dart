@@ -36,7 +36,7 @@ class KalmasDetail extends StatelessWidget {
                 children: [
                   // SizedBox(height: SizeConfig.screenHeight! * 0.05),
                           Text(AppStrings.kalmasData[index]['Name']!,style: TextStyle(
-                            fontSize: index == 4 || index == 5 ?SizeConfig.screenHeight! * 0.03 : SizeConfig.screenHeight! * 0.05,
+                            fontSize: index == 4 || index == 5 ?SizeConfig.screenHeight! * 0.03 : SizeConfig.screenHeight! * 0.03,
                             color: AppColors.kNavyBlueColor,
                             fontFamily: 'Gomgom'
                           ),),
@@ -60,15 +60,15 @@ class KalmasDetail extends StatelessWidget {
                           ),
                           ),
                           // SizedBox(height: SizeConfig.screenHeight! * 0.05),
-                          Container(
-                            color: Colors.black.withOpacity(0.1),
-                            child: Text(AppStrings.kalmasData[index]['English']!,
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                              fontSize: SizeConfig.screenHeight! * 0.03,
-                                fontFamily: 'Gomgom'
-                            ),),
-                          ),
+                          // Container(
+                          //   color: Colors.black.withOpacity(0.1),
+                          //   child: Text(AppStrings.kalmasData[index]['English']!,
+                          //     textAlign: TextAlign.center,
+                          //     style: TextStyle(
+                          //     fontSize: SizeConfig.screenHeight! * 0.03,
+                          //       fontFamily: 'Gomgom'
+                          //   ),),
+                          // ),
                 ],
               ),
             ),

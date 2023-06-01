@@ -52,7 +52,7 @@ class _SurahHomeScreenState extends State<SurahHomeScreen> {
           body: Column(
             children: [
               Container(
-                height: SizeConfig.screenHeight! * 0.75,
+                height: SizeConfig.screenHeight! * 0.7,
                 child: Align(
                     alignment: Alignment.center,
                     child: PageView.builder(

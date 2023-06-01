@@ -24,11 +24,11 @@ class WadhuContent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         SizedBox(
-          height: index == 6 ? SizeConfig.screenHeight! * 0.14 : SizeConfig.screenHeight! * 0.14,
+          height:  SizeConfig.screenHeight! * 0.02,
         ),
         Text('Step $index', style: AppStyles.stepTitle),
         SizedBox(
-          height: SizeConfig.screenHeight! * 0.04,
+          height: SizeConfig.screenHeight! * 0.02,
         ),
         Padding(
           padding: EdgeInsets.only(left: index == 6 ? SizeConfig.screenWidth! * 0.02 : 0 ) ,

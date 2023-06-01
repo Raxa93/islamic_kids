@@ -55,8 +55,9 @@ class _EmanyatScreenState extends State<EmanyatScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
-                height: SizeConfig.screenHeight! * 0.83,
+                height: SizeConfig.screenHeight! * 0.7,
                 width: SizeConfig.screenWidth,
+                // color: Colors.red.withOpacity(0.4),
                 child: PageView.builder(
                     controller: _controller,
                     onPageChanged: (int index) {

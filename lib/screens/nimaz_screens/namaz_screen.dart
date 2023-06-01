@@ -56,8 +56,9 @@ class _NamazScreenState extends State<NamazScreen> {
                // crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: SizeConfig.screenHeight! * 0.48,
+                Container(
+                  // color: Colors.red.withOpacity(0.4),
+                  height: SizeConfig.screenHeight! * 0.47,
                   child: PageView.builder(
                       controller: _controller,
                       onPageChanged: (int index) {
@@ -74,18 +75,18 @@ class _NamazScreenState extends State<NamazScreen> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 SizedBox(
-                                  height: SizeConfig.screenHeight! * 0.02,
+                                  height: SizeConfig.screenHeight! * 0.01,
                                 ),
                                 Text('Step ${i + 1}',
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize:
-                                            SizeConfig.screenHeight! * 0.035,
+                                            SizeConfig.screenHeight! * 0.03,
                                         fontFamily: 'Gomgom',
                                         color: const Color.fromRGBO(
                                             94, 25, 4, 1))),
                                 SizedBox(
-                                  height: SizeConfig.screenHeight! * 0.12,
+                                  height: SizeConfig.screenHeight! * 0.1,
                                 ),
                                 Text(
                                   AppStrings.namazData[i]['heading']!,
@@ -93,7 +94,7 @@ class _NamazScreenState extends State<NamazScreen> {
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontFamily: 'Gomgom',
-                                      fontSize: SizeConfig.screenHeight! * 0.02),
+                                      fontSize: SizeConfig.screenHeight! * 0.017),
                                 ),
                                 SizedBox(
                                   height: SizeConfig.screenHeight! * 0.016,
@@ -104,14 +105,14 @@ class _NamazScreenState extends State<NamazScreen> {
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontSize:
-                                          SizeConfig.screenHeight! * 0.05),
+                                          SizeConfig.screenHeight! * 0.043),
                                 ),
                                 Text(AppStrings.namazData[i]['subheading']!,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: i == 1
-                                            ? SizeConfig.screenHeight! * 0.0189
+                                            ? SizeConfig.screenHeight! * 0.0184
                                             : SizeConfig.screenHeight! *
                                                 0.025)),
                               ],
@@ -132,7 +133,7 @@ class _NamazScreenState extends State<NamazScreen> {
                         }
                       },
                       child: Image.asset("assets/arrow_back.png",
-                          height: SizeConfig.screenHeight! * 0.07),
+                          height: SizeConfig.screenHeight! * 0.06),
                     ) : const SizedBox(),
 
                     currentIndex != AppStrings.namazData.length - 1
@@ -147,7 +148,7 @@ class _NamazScreenState extends State<NamazScreen> {
                         }
                       },
                       child: Image.asset("assets/arrow_forward.png",
-                          height: SizeConfig.screenHeight! * 0.07),
+                          height: SizeConfig.screenHeight! * 0.06),
                     )
                         : const SizedBox(),
                   ],
