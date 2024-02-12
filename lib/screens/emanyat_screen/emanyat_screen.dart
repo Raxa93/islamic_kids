@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islamic_kids/screens/emanyat_screen/emanyat_content.dart';
 
-import '../../configurations/size_config.dart';
 import '../../constants/app_strings.dart';
-import '../nimaz_screens/namaz_detail_screen.dart';
 
 class EmanyatScreen extends StatefulWidget {
   const EmanyatScreen({Key? key}) : super(key: key);
@@ -31,7 +29,6 @@ class _EmanyatScreenState extends State<EmanyatScreen> {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return SafeArea(
       child: Container(
         decoration: const BoxDecoration(
@@ -54,9 +51,9 @@ class _EmanyatScreenState extends State<EmanyatScreen> {
             // crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Container(
-                height: SizeConfig.screenHeight! * 0.7,
-                width: SizeConfig.screenWidth,
+              SizedBox(
+                height: 540,
+                width: MediaQuery.of(context).size.width,
                 // color: Colors.red.withOpacity(0.4),
                 child: PageView.builder(
                     controller: _controller,
@@ -77,16 +74,16 @@ class _EmanyatScreenState extends State<EmanyatScreen> {
               currentIndex == 0
                   ? Container(
                 color: Colors.white.withOpacity(0.5),
-                height: SizeConfig.screenHeight! * 0.08,
-                    width: SizeConfig.screenWidth,
+                height: 70,
+                    width: MediaQuery.of(context).size.width,
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         // crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          ElevatedButton(onPressed: (){
-                            Navigator.pop(context);
-                          }, child: Text('Home')),
-                          SizedBox(width: SizeConfig.screenWidth! * 0.2),
+                          // ElevatedButton(onPressed: (){
+                          //   Navigator.pop(context);
+                          // }, child: const Text('Home')),
+                          const SizedBox(width: 10),
                           InkWell(
                             onTap: () {
                               if (currentIndex != AppStrings.emanyatData.length - 1) {
@@ -98,7 +95,7 @@ class _EmanyatScreenState extends State<EmanyatScreen> {
                             },
                             child: Image.asset(
                               'assets/arrow_forward.png',
-                              height: SizeConfig.screenHeight! * 0.07,
+                              height: 45,
                             ),
                           )
                         ],
@@ -106,8 +103,8 @@ class _EmanyatScreenState extends State<EmanyatScreen> {
                   )
                   : Container(
                 color: Colors.white.withOpacity(0.5),
-                height: SizeConfig.screenHeight! * 0.08,
-                width: SizeConfig.screenWidth,
+                height: 70,
+                width: MediaQuery.of(context).size.width,
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -121,12 +118,12 @@ class _EmanyatScreenState extends State<EmanyatScreen> {
                               }
                             },
                             child: Image.asset("assets/arrow_back.png",
-                                height: SizeConfig.screenHeight! * 0.07),
+                                height: 45),
                           ),
-                          SizedBox(width: SizeConfig.screenWidth! * 0.24),
-                         ElevatedButton(onPressed: (){
-                           Navigator.pop(context);
-                         }, child: Text('Home'))
+                          const SizedBox(width: 10),
+                         // ElevatedButton(onPressed: (){
+                         //   Navigator.pop(context);
+                         // }, child: const Text('Home'))
                         ],
                       ),
                   ),

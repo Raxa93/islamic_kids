@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamic_kids/screens/qaida/qiada_sabaq_screen.dart';
 
-import '../../configurations/size_config.dart';
 import '../../constants/app_colors.dart';
 import '../../constants/cutom_widgets.dart';
 
@@ -10,7 +9,6 @@ class QaidaHomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return SafeArea(
         child: Container(
           decoration: const BoxDecoration(
@@ -42,11 +40,11 @@ class QaidaHomeScreen extends StatelessWidget {
                       iconPath: (''),
                       title: 'Chapter 1',
                       subTitle: 'سبق نمبر 1',
-                      height: SizeConfig.screenHeight! * 0.17,
-                      width: SizeConfig.screenWidth! * 0.6,
+                      height: 70,
+                      width: 200,
                       hasIcon: false,
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: ((context) =>   QaidaSabaqScreen(imageIndex: 0))));
+                        Navigator.of(context).push(MaterialPageRoute(builder: ((context) =>   const QaidaSabaqScreen(imageIndex: 0))));
                       }),
                   CustomWidgets.QaidaCard(
                       firstColor: AppColors.kSecondKalmaGradientDark,
@@ -54,12 +52,12 @@ class QaidaHomeScreen extends StatelessWidget {
                       iconPath: (''),
                       title: 'Chapter 2',
                       subTitle: 'سبق نمبر 2',
-                      height: SizeConfig.screenHeight! * 0.17,
-                      width: SizeConfig.screenWidth! * 0.6,
+                      height: 70,
+                      width: 200,
                       hasIcon: false,
                       onTap: () {
-                        // Navigator.push(context, MaterialPageRoute(builder: ((context) =>   MultiplesDuaScreen(
-                        Navigator.push(context, MaterialPageRoute(builder: ((context) =>   QaidaSabaqScreen(imageIndex: 1))));
+                        // Navigator.of(context).push(MaterialPageRoute(builder: ((context) =>   MultiplesDuaScreen(
+                        Navigator.of(context).push(MaterialPageRoute(builder: ((context) =>   const QaidaSabaqScreen(imageIndex: 1))));
                       }),
                   CustomWidgets.QaidaCard(
                       firstColor: AppColors.kThirdKalmaGradientDark,
@@ -67,11 +65,11 @@ class QaidaHomeScreen extends StatelessWidget {
                       iconPath: (''),
                       title: 'Chapter 3',
                       subTitle: 'سبق نمبر 3',
-                      height: SizeConfig.screenHeight! * 0.17,
-                      width: SizeConfig.screenWidth! * 0.6,
+                      height: 70.0,
+                      width: 200.0,
                       hasIcon: false,
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: ((context) =>   QaidaSabaqScreen(imageIndex: 2))));
+                        Navigator.of(context).push(MaterialPageRoute(builder: ((context) =>   const QaidaSabaqScreen(imageIndex: 2))));
                       }),
                   CustomWidgets.QaidaCard(
                       firstColor: AppColors.kGreenGradientDark,
@@ -79,11 +77,11 @@ class QaidaHomeScreen extends StatelessWidget {
                       iconPath: (''),
                       title: 'Chapter 4',
                       subTitle: 'سبق نمبر 4',
-                      height: SizeConfig.screenHeight! * 0.17,
-                      width: SizeConfig.screenWidth! * 0.6,
+                      height: 70.0,
+                      width: 200.0,
                       hasIcon: false,
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: ((context) =>   QaidaSabaqScreen(imageIndex: 3))));
+                        Navigator.of(context).push(MaterialPageRoute(builder: ((context) =>   const QaidaSabaqScreen(imageIndex: 3))));
                       }),
 
 

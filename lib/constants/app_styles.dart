@@ -2,23 +2,22 @@
 
 import 'package:flutter/material.dart';
 
-import '../configurations/size_config.dart';
 
 class AppStyles{
-  static  TextStyle headline1 = TextStyle(
+  static  TextStyle headline1 = const TextStyle(
     fontFamily: 'Roboto',
     fontWeight: FontWeight.w300,
-    fontSize: SizeConfig.screenHeight! * 0.05,
+    fontSize: 22,
   );
-  static  TextStyle headline2 = TextStyle(
+  static  TextStyle headline2 = const TextStyle(
 
     fontWeight: FontWeight.w400,
-    fontSize: SizeConfig.screenHeight! * 0.027,
+    fontSize: 17,
   );
-  static  TextStyle headline3 = TextStyle(
+  static  TextStyle headline3 = const TextStyle(
 
     fontWeight: FontWeight.w600,
-    fontSize: SizeConfig.screenHeight! * 0.025,
+    fontSize: 18,
   );
   static const TextStyle headline4 = TextStyle(
 
@@ -41,16 +40,16 @@ class AppStyles{
     fontSize: 22,
   );
 
-  static final kCardTextStyle = TextStyle(
+  static const kCardTextStyle = TextStyle(
       color: Colors.black,
       fontFamily: 'Gomgom',
-      fontSize: SizeConfig.screenHeight! * 0.03);
+      fontSize: 17);
 
-  static final stepTitle = TextStyle(
+  static const stepTitle = TextStyle(
       fontWeight: FontWeight.bold,
-      fontSize: SizeConfig.screenHeight! * 0.027,
+      fontSize: 20,
       fontFamily: 'Gomgom',
-      color: const Color.fromRGBO(94, 25, 4, 1)
+      color: Color.fromRGBO(94, 25, 4, 1)
   );
 
 

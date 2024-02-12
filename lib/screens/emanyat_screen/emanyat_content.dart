@@ -1,48 +1,47 @@
 
 import 'package:flutter/material.dart';
-import 'package:islamic_kids/configurations/size_config.dart';
 
 class EmanyatContent extends StatelessWidget {
-  String emanyatName ;
-  String emanyatDua ;
-  String emanyatUrdu ;
-  String emanyatEnglish ;
-   EmanyatContent({Key? key,required this.emanyatName,required this.emanyatDua,required this.emanyatEnglish,required this.emanyatUrdu}) : super(key: key);
+  final String emanyatName ;
+ final String emanyatDua ;
+  final String emanyatUrdu ;
+  final String emanyatEnglish ;
+   const EmanyatContent({Key? key,required this.emanyatName,required this.emanyatDua,required this.emanyatEnglish,required this.emanyatUrdu}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.symmetric(horizontal: SizeConfig.screenWidth! *0.08),
+      padding:  const EdgeInsets.symmetric(horizontal: 13),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SizedBox(height: SizeConfig.screenHeight! * 0.072),
-          Text(emanyatName,style: TextStyle(
-            fontSize: SizeConfig.screenHeight! * 0.025,
+          const SizedBox(height: 70),
+          Text(emanyatName,style: const TextStyle(
+            fontSize: 20,
             color: Colors.brown,
             fontFamily: 'Gomgom'
           ),),
-          SizedBox(height: SizeConfig.screenHeight! * 0.05),
+          const SizedBox(height: 60),
           Text(
-              textAlign: TextAlign.justify,
+              textAlign: TextAlign.center,
               emanyatDua,
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
-            fontSize: SizeConfig.screenHeight! * 0.025
+            fontSize: 20
           )),
-          SizedBox(height: SizeConfig.screenHeight! * 0.02),
+          const SizedBox(height: 20),
           Text(emanyatUrdu,
             textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.grey,
-                  fontSize: SizeConfig.screenHeight! * 0.025
+                  fontSize: 18
               )
           ),
-          SizedBox(height: SizeConfig.screenHeight! * 0.02),
+          const SizedBox(height: 20),
           Text(emanyatEnglish,textAlign: TextAlign.center,
-          style: TextStyle(
-              letterSpacing: 0.1,
-              fontSize: SizeConfig.screenHeight! * 0.025,fontFamily: 'Gomgom'),),
+          style: const TextStyle(
+              letterSpacing: 0.4,
+              fontSize: 18,fontFamily: 'Gomgom'),),
 
         ],
 

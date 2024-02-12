@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamic_kids/constants/app_styles.dart';
 
-import '../../configurations/size_config.dart';
 
 
 class NamazContent extends StatelessWidget {
@@ -20,39 +19,39 @@ class NamazContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: SizeConfig.screenWidth! * 0.18),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SizedBox(
-            height:  SizeConfig.screenHeight! * 0.1,
+          const SizedBox(
+            height:  10,
           ),
           Text('Step ${index+1}',
               style: AppStyles.stepTitle),
-          SizedBox(
-            height: SizeConfig.screenHeight! * 0.1,
+          const SizedBox(
+            height: 10,
           ),
 
           Text(title,
             textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.black,
+            style: const TextStyle(color: Colors.black,
                 fontFamily: 'Gomgom',
-                fontSize: SizeConfig.screenHeight! * 0.023),
+                fontSize: 20),
 
           ),
-          SizedBox(
-            height: SizeConfig.screenHeight! * 0.016,
+          const SizedBox(
+            height: 10,
           ),
           Text(dua,
             textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.black,
-                fontSize: SizeConfig.screenHeight! * 0.055),
+            style: const TextStyle(color: Colors.black,
+                fontSize: 18),
 
           ),
           Text(subTitle,
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.black,
-                  fontSize: index == 1 ? SizeConfig.screenHeight ! * 0.0189: SizeConfig.screenHeight! * 0.025)),
+                  fontSize: index == 1 ? 18: 17)),
         ],
       ),
     );

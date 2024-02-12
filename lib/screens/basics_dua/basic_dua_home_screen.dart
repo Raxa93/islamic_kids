@@ -2,17 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:islamic_kids/constants/app_strings.dart';
 import 'package:islamic_kids/screens/basics_dua/mutilples_dua.dart';
 
-import '../../configurations/size_config.dart';
 import '../../constants/app_colors.dart';
 import '../../constants/cutom_widgets.dart';
-import '../kalmas/kalmas_details_screen.dart';
 
 class BasicDuaHomeScreen extends StatelessWidget {
   const BasicDuaHomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return SafeArea(
         child: Container(
           decoration: const BoxDecoration(
@@ -36,18 +33,18 @@ class BasicDuaHomeScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SizedBox(height: 20),
+                    const SizedBox(height: 40),
                     CustomWidgets.kalmasCard(
                         firstColor: AppColors.kFirstKalmaGradientDark,
                         secondColor: AppColors.kFirstKalmaGradientLight,
                         iconPath: (''),
                         title: 'Dua Before and After Sleep',
                         subTitle: 'سونے سے پہلے اور بعد کی دعا',
-                        height: SizeConfig.screenHeight! * 0.1,
-                        width: SizeConfig.screenWidth! * 0.8,
+                        height: 70.0,
+                        width: 290.0,
                         hasIcon: false,
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: ((context) =>   MultiplesDuaScreen(
+                          Navigator.of(context).push(MaterialPageRoute(builder: ((context) =>   MultiplesDuaScreen(
                             isMultipleDua: true,
                             firstDuaName: AppStrings.basicsDua[0]['Name'].toString(),
                             firstDuaUrduName: AppStrings.basicsDua[0]['UrduName'].toString(),
@@ -72,11 +69,11 @@ class BasicDuaHomeScreen extends StatelessWidget {
                         iconPath: (''),
                         title: 'Dua Before and After Eating',
                         subTitle: 'کھانے سے پہلے اور بعد کی دعا',
-                        height: SizeConfig.screenHeight! * 0.1,
-                        width: SizeConfig.screenWidth! * 0.8,
+                        height: 70.0,
+                        width: 290.0,
                         hasIcon: false,
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: ((context) =>   MultiplesDuaScreen(
+                          Navigator.of(context).push(MaterialPageRoute(builder: ((context) =>   MultiplesDuaScreen(
                             isMultipleDua: true,
                             firstDuaName: AppStrings.basicsDua[2]['Name'].toString(),
                             firstDuaUrduName: AppStrings.basicsDua[2]['UrduName'].toString(),
@@ -97,12 +94,12 @@ class BasicDuaHomeScreen extends StatelessWidget {
                         iconPath: (''),
                         title: 'Dua Before and After Drinking water',
                         subTitle: 'پانی پینے سے پہلے اور بعد کی دعا',
-                        height: SizeConfig.screenHeight! * 0.1,
-                        width: SizeConfig.screenWidth! * 0.8,
+                        height: 70.0,
+                        width: 290.0,
                         hasIcon: false,
                         onTap: () {
-                          Navigator.push(
-                              context,
+
+                         Navigator.of(context).push(
                               MaterialPageRoute(
                                   builder: ((context) =>   MultiplesDuaScreen(
                                     isMultipleDua: true,
@@ -125,12 +122,11 @@ class BasicDuaHomeScreen extends StatelessWidget {
                         iconPath: (''),
                         title: 'Dua Before & after Ablution',
                         subTitle: 'وضو سے پہلے اور بعد کی دعا',
-                        height: SizeConfig.screenHeight! * 0.1,
-                        width: SizeConfig.screenWidth! * 0.8,
+                        height: 70.0,
+                        width: 290.0,
                         hasIcon: false,
                         onTap: () {
-                          Navigator.push(
-                              context,
+                         Navigator.of(context).push(
                               MaterialPageRoute(
                                   builder: ((context) =>   MultiplesDuaScreen(
                                     isMultipleDua: true,
@@ -153,12 +149,11 @@ class BasicDuaHomeScreen extends StatelessWidget {
                         iconPath: (''),
                         title: 'Dua when drinking Milk',
                         subTitle: 'دودھ پیتے وقت کی دعا',
-                        height: SizeConfig.screenHeight! * 0.1,
-                        width: SizeConfig.screenWidth! * 0.8,
+                        height: 70.0,
+                        width: 290.0,
                         hasIcon: false,
                         onTap: () {
-                          Navigator.push(
-                              context,
+                         Navigator.of(context).push(
                               MaterialPageRoute(
                                   builder: ((context) =>   MultiplesDuaScreen(
                                     isMultipleDua: false,
@@ -176,12 +171,11 @@ class BasicDuaHomeScreen extends StatelessWidget {
                         iconPath: (''),
                         title: 'Dua During Ablution',
                         subTitle: 'وضو کے دوران دعا',
-                        height: SizeConfig.screenHeight! * 0.1,
-                        width: SizeConfig.screenWidth! * 0.8,
+                        height: 70.0,
+                        width: 290.0,
                         hasIcon: false,
                         onTap: () {
-                          Navigator.push(
-                              context,
+                         Navigator.of(context).push(
                               MaterialPageRoute(
                                   builder: ((context) =>   MultiplesDuaScreen(
                                     isMultipleDua: false,
@@ -197,14 +191,13 @@ class BasicDuaHomeScreen extends StatelessWidget {
                         firstColor: AppColors.kSixthKalmaGradientDark,
                         secondColor: AppColors.kSixthKalmaGradientLight,
                         iconPath: (''),
-                        title: 'Dua, Looking Mirror',
+                        title: 'Dua Looking Mirror',
                         subTitle: 'آئینے میں دیکھتے وقت کی دعا',
-                        height: SizeConfig.screenHeight! * 0.1,
-                        width: SizeConfig.screenWidth! * 0.8,
+                        height: 70.0,
+                        width: 290.0,
                         hasIcon: false,
                         onTap: () {
-                          Navigator.push(
-                              context,
+                         Navigator.of(context).push(
                               MaterialPageRoute(
                                   builder: ((context) =>   MultiplesDuaScreen(
                                     isMultipleDua: false,
@@ -222,12 +215,11 @@ class BasicDuaHomeScreen extends StatelessWidget {
                         iconPath: (''),
                         title: 'Dua, After sneezing',
                         subTitle: 'چھینک کے بعد کی دعا',
-                        height: SizeConfig.screenHeight! * 0.1,
-                        width: SizeConfig.screenWidth! * 0.8,
+                        height: 70.0,
+                        width: 290.0,
                         hasIcon: false,
                         onTap: () {
-                          Navigator.push(
-                              context,
+                         Navigator.of(context).push(
                               MaterialPageRoute(
                                   builder: ((context) =>   MultiplesDuaScreen(
                                     isMultipleDua: false,

@@ -1,9 +1,9 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:islamic_kids/screens/wadhu_screens/wadhu_content.dart';
 
-import '../../configurations/size_config.dart';
 import '../../constants/app_strings.dart';
 
 
@@ -21,7 +21,10 @@ class _WadhuScreenState extends State<WadhuScreen> {
 
   @override
   void initState() {
-    _controller = PageController(initialPage: 0);
+    SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
+      _controller = PageController(initialPage: 0);
+    });
+
     super.initState();
   }
 
@@ -33,7 +36,6 @@ class _WadhuScreenState extends State<WadhuScreen> {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return SafeArea(
       child: Container(
         decoration: const BoxDecoration(
@@ -43,7 +45,7 @@ class _WadhuScreenState extends State<WadhuScreen> {
           ),
         ),
         child: Scaffold(
-          extendBodyBehindAppBar: true,
+          // extendBodyBehindAppBar: true,
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             backgroundColor: Colors.transparent,
@@ -56,11 +58,12 @@ class _WadhuScreenState extends State<WadhuScreen> {
              crossAxisAlignment: CrossAxisAlignment.center,
              mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizedBox(height: SizeConfig.screenHeight! * 0.09),
-              Container(
+              const SizedBox(height: 50),
+              SizedBox(
                  // color: Colors.red.withOpacity(0.5),
-                height: SizeConfig.screenHeight! * 0.35,
-                width: SizeConfig.screenWidth! * 0.8,
+                // height: SizeConfig.screenHeight! * 0.35,
+                height: 250,
+                width: MediaQuery.of(context).size.width * 0.8,
                 child: PageView.builder(
                     controller: _controller,
                     onPageChanged: (int index) {
@@ -85,7 +88,7 @@ class _WadhuScreenState extends State<WadhuScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(width: SizeConfig.screenWidth! * 0.4),
+                  SizedBox(width: MediaQuery.of(context).size.width * 0.4),
                   InkWell(
                     onTap: (){
                       if(currentIndex != AppStrings.splashData.length - 1){
@@ -96,7 +99,7 @@ class _WadhuScreenState extends State<WadhuScreen> {
                       }
                     },
                     child: Image.asset('assets/arrow_forward.png',
-                      height: SizeConfig.screenHeight! * 0.07,
+                      height: 45,
                     ),
                   )
                 ],
@@ -117,7 +120,7 @@ class _WadhuScreenState extends State<WadhuScreen> {
                     },
                     child: Image.asset(
                         "assets/arrow_back.png",
-                        height: SizeConfig.screenHeight! * 0.07),
+                        height: 45),
                   ),
 
                   currentIndex != AppStrings.splashData.length - 1 ?  InkWell(
@@ -131,7 +134,7 @@ class _WadhuScreenState extends State<WadhuScreen> {
                     },
                     child: Image.asset(
                         "assets/arrow_forward.png",
-                        height: SizeConfig.screenHeight! * 0.07),
+                        height: 47),
                   ) : const SizedBox(),
 
                 ],

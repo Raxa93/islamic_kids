@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../configurations/size_config.dart';
 import '../../constants/app_strings.dart';
-import '../../constants/app_styles.dart';
-import 'namaz_detail_screen.dart';
-import 'nimaz_content.dart';
 
 class NamazScreen extends StatefulWidget {
   const NamazScreen({Key? key}) : super(key: key);
@@ -32,7 +28,6 @@ class _NamazScreenState extends State<NamazScreen> {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return SafeArea(
       child: Container(
         decoration: const BoxDecoration(
@@ -56,9 +51,9 @@ class _NamazScreenState extends State<NamazScreen> {
                // crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Container(
+                SizedBox(
                   // color: Colors.red.withOpacity(0.4),
-                  height: SizeConfig.screenHeight! * 0.47,
+                  height: 350,
                   child: PageView.builder(
                       controller: _controller,
                       onPageChanged: (int index) {
@@ -69,52 +64,49 @@ class _NamazScreenState extends State<NamazScreen> {
                       },
                       itemCount: AppStrings.namazData.length,
                       itemBuilder: (_, i) => Padding(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: SizeConfig.screenWidth! * 0.18),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 70),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                SizedBox(
-                                  height: SizeConfig.screenHeight! * 0.01,
+                                const SizedBox(
+                                  height: 25,
                                 ),
                                 Text('Step ${i + 1}',
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        fontSize:
-                                            SizeConfig.screenHeight! * 0.03,
+                                        fontSize: 22,
                                         fontFamily: 'Gomgom',
-                                        color: const Color.fromRGBO(
+                                        color: Color.fromRGBO(
                                             94, 25, 4, 1))),
-                                SizedBox(
-                                  height: SizeConfig.screenHeight! * 0.1,
+                                const SizedBox(
+                                  height: 75,
                                 ),
                                 Text(
                                   AppStrings.namazData[i]['heading']!,
                                   textAlign: TextAlign.center,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: Colors.black,
                                       fontFamily: 'Gomgom',
-                                      fontSize: SizeConfig.screenHeight! * 0.017),
+                                      fontSize: 18),
                                 ),
-                                SizedBox(
-                                  height: SizeConfig.screenHeight! * 0.016,
+                                const SizedBox(
+                                  height: 15,
                                 ),
                                 Text(
                                   AppStrings.namazData[i]['dua']!,
                                   textAlign: TextAlign.center,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       color: Colors.black,
-                                      fontSize:
-                                          SizeConfig.screenHeight! * 0.043),
+                                      fontSize:  17 ),
                                 ),
                                 Text(AppStrings.namazData[i]['subheading']!,
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                         color: Colors.black,
                                         fontSize: i == 1
-                                            ? SizeConfig.screenHeight! * 0.0184
-                                            : SizeConfig.screenHeight! *
-                                                0.025)),
+                                            ? 17
+                                            : 17)),
                               ],
                             ),
                           )),
@@ -133,7 +125,7 @@ class _NamazScreenState extends State<NamazScreen> {
                         }
                       },
                       child: Image.asset("assets/arrow_back.png",
-                          height: SizeConfig.screenHeight! * 0.06),
+                          height: 45),
                     ) : const SizedBox(),
 
                     currentIndex != AppStrings.namazData.length - 1
@@ -148,15 +140,16 @@ class _NamazScreenState extends State<NamazScreen> {
                         }
                       },
                       child: Image.asset("assets/arrow_forward.png",
-                          height: SizeConfig.screenHeight! * 0.06),
+                          height: 45),
                     )
                         : const SizedBox(),
                   ],
                 ),
-                SizedBox(height: SizeConfig.screenHeight! * 0.12),
+                const SizedBox(height: 100),
                 Image.asset(
                   AppStrings.namazData[currentIndex]['image']!,
-                  height: SizeConfig.screenHeight! * 0.13,
+                  height: 90,
+                  fit: BoxFit.cover,
                 ),
               ],
             ),

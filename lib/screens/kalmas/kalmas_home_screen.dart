@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:islamic_kids/configurations/size_config.dart';
 import 'package:islamic_kids/constants/app_colors.dart';
 import 'package:islamic_kids/constants/cutom_widgets.dart';
 import 'package:islamic_kids/screens/kalmas/kalmas_details_screen.dart';
@@ -14,7 +13,6 @@ class KalmasHomeScreen extends StatefulWidget {
 class _KalmasHomeScreenState extends State<KalmasHomeScreen> {
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return SafeArea(
         child: Container(
       decoration: const BoxDecoration(
@@ -38,21 +36,18 @@ class _KalmasHomeScreenState extends State<KalmasHomeScreen> {
             // mainAxisAlignment: MainAxisAlignment.center,
             // crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              SizedBox(height: SizeConfig.screenHeight! * 0.07),
+              const SizedBox(height: 65),
               CustomWidgets.kalmasCard(
                   firstColor: AppColors.kFirstKalmaGradientDark,
                   secondColor: AppColors.kFirstKalmaGradientLight,
                   iconPath: ('assets/one.png'),
                   title: 'First Kalma: Taybba',
                   subTitle: 'اول کلمہ توحید',
-                  height: SizeConfig.screenHeight! * 0.1,
-                  width: SizeConfig.screenWidth! * 0.75,
+                  height: 80.0,
+                  width: 290.0,
                   hasIcon: true,
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: ((context) => KalmasDetail(index: 0))));
+                    Navigator.of(context).push(MaterialPageRoute(builder: ((context) => KalmasDetail(index: 0))));
                   }),
               CustomWidgets.kalmasCard(
                   firstColor: AppColors.kSecondKalmaGradientDark,
@@ -60,14 +55,11 @@ class _KalmasHomeScreenState extends State<KalmasHomeScreen> {
                   iconPath: ('assets/two.png'),
                   title: 'Second Kalma: Shahadaat',
                   subTitle: 'دوسرا کلمہ شہادت',
-                  height: SizeConfig.screenHeight! * 0.1,
-                  width: SizeConfig.screenWidth! * 0.75,
+                  height: 80.0,
+                  width: 290.0,
                   hasIcon: true,
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: ((context) => KalmasDetail(index: 1))));
+                    Navigator.of(context).push(MaterialPageRoute(builder: ((context) => KalmasDetail(index: 1))));
                   }),
               CustomWidgets.kalmasCard(
                   firstColor: AppColors.kThirdKalmaGradientDark,
@@ -75,12 +67,12 @@ class _KalmasHomeScreenState extends State<KalmasHomeScreen> {
                   iconPath: ('assets/three.png'),
                   title: 'Third Kalma: Tamjeed',
                   subTitle: 'تیسرا کلمہ تمجید',
-                  height: SizeConfig.screenHeight! * 0.1,
-                  width: SizeConfig.screenWidth! * 0.75,
+                  height: 80.0,
+                  width: 290.0,
                   hasIcon: true,
                   onTap: () {
-                    Navigator.push(
-                        context,
+                    Navigator.of(context).push(
+
                         MaterialPageRoute(
                             builder: ((context) => KalmasDetail(
                                   index: 2,
@@ -92,12 +84,12 @@ class _KalmasHomeScreenState extends State<KalmasHomeScreen> {
                   iconPath: ('assets/four.png'),
                   title: 'Fourth Kalma: Tahueed',
                   subTitle: 'چوتھا کلمہ توحید',
-                  height: SizeConfig.screenHeight! * 0.1,
-                  width: SizeConfig.screenWidth! * 0.75,
+                  height: 80.0,
+                  width: 290.0,
                   hasIcon: true,
                   onTap: () {
-                    Navigator.push(
-                        context,
+                    Navigator.of(context).push(
+
                         MaterialPageRoute(
                             builder: ((context) => KalmasDetail(
                                   index: 3,
@@ -109,12 +101,12 @@ class _KalmasHomeScreenState extends State<KalmasHomeScreen> {
                   iconPath: ('assets/five.png'),
                   title: 'Fifth kalma: Astagfar',
                   subTitle: 'پانچواں کلمہ استغفار',
-                  height: SizeConfig.screenHeight! * 0.1,
-                  width: SizeConfig.screenWidth! * 0.75,
+                  height: 80.0,
+                  width: 290.0,
                   hasIcon: true,
                   onTap: () {
-                    Navigator.push(
-                        context,
+
+                    Navigator.of(context).push(
                         MaterialPageRoute(
                             builder: ((context) => KalmasDetail(
                                   index: 4,
@@ -126,12 +118,11 @@ class _KalmasHomeScreenState extends State<KalmasHomeScreen> {
                   iconPath: ('assets/six.png'),
                   title: 'Sixth Kalma: Radde Kuffar',
                   subTitle: 'چھٹا کلمہ رد کفر',
-                  height: SizeConfig.screenHeight! * 0.1,
-                  width: SizeConfig.screenWidth! * 0.75,
+                  height: 80.0,
+                  width: 290.0,
                   hasIcon: true,
                   onTap: () {
-                    Navigator.push(
-                        context,
+                    Navigator.of(context).push(
                         MaterialPageRoute(
                             builder: ((context) => KalmasDetail(
                                   index: 5,

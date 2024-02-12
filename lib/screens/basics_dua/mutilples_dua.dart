@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:islamic_kids/configurations/size_config.dart';
 import 'package:islamic_kids/constants/app_styles.dart';
 
-import '../../constants/app_strings.dart';
 
 class MultiplesDuaScreen extends StatelessWidget {
 
@@ -33,7 +31,6 @@ class MultiplesDuaScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return SafeArea(child: Container(
       decoration:  const BoxDecoration(
         image: DecorationImage(
@@ -53,70 +50,94 @@ class MultiplesDuaScreen extends StatelessWidget {
         ),
         body: Center(
           child: isMultipleDua ? Column(
-           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+           mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              const SizedBox(height: 50),
               Container(
-                height: SizeConfig.screenHeight! * 0.35,
-                width: SizeConfig.screenWidth! * 0.8,
+                // height: 270,
+                width: MediaQuery.of(context).size.width * 0.8,
                 decoration: AppStyles.kRoundedTContainer.copyWith(color:Colors.white.withOpacity(0.8) ),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  // mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
+                    const SizedBox(height: 10),
                     Text(firstDuaName,style: AppStyles.headline3),
+                    const SizedBox(height: 20),
                     Text(firstDuaUrduName,style: AppStyles.headline3),
-                    Divider(thickness: 3,color: Colors.blueGrey,indent: SizeConfig.screenWidth! * 0.05,endIndent: SizeConfig.screenWidth! * 0.05),
+                    const SizedBox(height: 10),
+                    const Divider(thickness: 2,color: Colors.blueGrey,indent: 20,endIndent: 30),
+                    const SizedBox(height: 10),
                     Text(firstDua,style: AppStyles.headline2),
-                    Divider(thickness: 3,color: Colors.blueGrey,indent: SizeConfig.screenWidth! * 0.1,endIndent: SizeConfig.screenWidth! * 0.1),
+                    const SizedBox(height: 10),
+                    const Divider(thickness: 2,color: Colors.blueGrey,indent: 20,endIndent: 30),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Text(firstEnglish,style: AppStyles.headline4,textAlign: TextAlign.center),
                     ),
+                    const SizedBox(height: 10),
                     Text(firstUrdu,style: AppStyles.headline4,textAlign: TextAlign.center),
-
+                    const SizedBox(height: 30),
                   ],
                 ),
               ),
-              // SizedBox(height: SizeConfig.screenHeight! * 0.04),
+              const SizedBox(height: 50),
               Container(
-                height: SizeConfig.screenHeight! * 0.4,
-                width: SizeConfig.screenWidth! * 0.8,
+                // height: SizeConfig.screenHeight! * 0.4,
+                width: MediaQuery.of(context).size.width * 0.8,
                 decoration: AppStyles.kRoundedTContainer.copyWith(color:Colors.white.withOpacity(0.8) ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    const SizedBox(height: 10),
                     Text(secondDuaName!,style: AppStyles.headline3),
+                    const SizedBox(height: 20),
                     Text(secondDuaUrduName!,style: AppStyles.headline3),
-                    Divider(thickness: 3,color: Colors.blueGrey,indent: SizeConfig.screenWidth! * 0.05,endIndent: SizeConfig.screenWidth! * 0.05),
+                    const SizedBox(height: 10),
+                    const Divider(thickness: 2,color: Colors.blueGrey,indent: 20,endIndent: 30),
+                    const SizedBox(height: 10),
                     Text(secondDua!,style: AppStyles.headline2,textAlign: TextAlign.center),
-                    Divider(thickness: 3,color: Colors.blueGrey,indent: SizeConfig.screenWidth! * 0.1,endIndent: SizeConfig.screenWidth! * 0.1),
+                    const SizedBox(height: 10),
+                    const Divider(thickness: 2,color: Colors.blueGrey,indent: 20,endIndent: 30),
+
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Text(secondEnglish!,style: AppStyles.headline4,textAlign: TextAlign.center),
                     ),
+                    const SizedBox(height: 10),
                     Text(secondUrdu!,style: AppStyles.headline4,textAlign: TextAlign.center),
-
+                    const SizedBox(height: 30),
                   ],
                 ),
               ),
             ],
           ) : Container(
-            height: SizeConfig.screenHeight! * 0.6,
-            width: SizeConfig.screenWidth! * 0.8,
+            height: MediaQuery.of(context).size.height * 0.6,
+            width: MediaQuery.of(context).size.width * 0.8,
             decoration: AppStyles.kRoundedTContainer.copyWith(color:Colors.white.withOpacity(0.8) ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                const SizedBox(height: 50),
                 Text(firstDuaName,style: AppStyles.headline3),
+                const SizedBox(height: 20),
                 Text(firstDuaUrduName,style: AppStyles.headline3),
-                Divider(thickness: 3,color: Colors.blueGrey,indent: SizeConfig.screenWidth! * 0.05,endIndent: SizeConfig.screenWidth! * 0.05),
+                const SizedBox(height: 20),
+                const Divider(thickness: 2,color: Colors.blueGrey,indent: 20,endIndent: 30),
+                const SizedBox(height: 20),
                 Text(firstDua,style: AppStyles.headline2,textAlign: TextAlign.center),
-                Divider(thickness: 3,color: Colors.blueGrey,indent: SizeConfig.screenWidth! * 0.1,endIndent: SizeConfig.screenWidth! * 0.1),
+                const SizedBox(height: 20),
+                const Divider(thickness: 2,color: Colors.blueGrey,indent: 20,endIndent: 30),
+                const SizedBox(height: 30),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
                   child: Text(firstEnglish,style: AppStyles.headline4,textAlign: TextAlign.center),
                 ),
-                Text(firstUrdu,style: AppStyles.headline4,textAlign: TextAlign.center),
+                const SizedBox(height: 30),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: Text(firstUrdu,style: AppStyles.headline4,textAlign: TextAlign.center),
+                ),
 
               ],
             ),

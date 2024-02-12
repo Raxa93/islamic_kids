@@ -1,7 +1,6 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:islamic_kids/configurations/size_config.dart';
 
 class NimazDetailScreen extends StatelessWidget {
   String? detailText ;
@@ -10,7 +9,6 @@ class NimazDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return SafeArea(
       child: Container(
         decoration: const BoxDecoration(
@@ -33,20 +31,20 @@ class NimazDetailScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(height: SizeConfig.screenHeight! * 0.09),
-                Text('Step ${index! +1} Details',style: TextStyle( fontWeight: FontWeight.bold,
-                    fontSize: SizeConfig.screenHeight! * 0.035,
+                const SizedBox(height: 20),
+                Text('Step ${index! +1} Details',style: const TextStyle( fontWeight: FontWeight.bold,
+                    fontSize: 18,
                     fontFamily: 'Gomgom',
-                    color: const Color.fromRGBO(94, 25, 4, 1)), ),
-                SizedBox(height: SizeConfig.screenHeight! * 0.09),
-                Container(
-                  height: SizeConfig.screenHeight! * 0.4,
-                  width: SizeConfig.screenWidth! * 0.8,
+                    color: Color.fromRGBO(94, 25, 4, 1)), ),
+                const SizedBox(height: 10),
+                SizedBox(
+                  height: 400,
+                  width: MediaQuery.of(context).size.width * 0.8,
                   child: Text(
                     detailText!.trim().toString(),
-                    style: TextStyle(
+                    style: const TextStyle(
 
-                    fontSize: SizeConfig.screenHeight! * 0.025
+                    fontSize: 17
                   ),),
                 ),
               ],

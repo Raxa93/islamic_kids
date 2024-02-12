@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../../configurations/size_config.dart';
 
 class SurahDetailScreen extends StatelessWidget {
-  String imagePath;
-   SurahDetailScreen({Key? key,required this.imagePath}) : super(key: key);
+ final String imagePath;
+   const SurahDetailScreen({Key? key,required this.imagePath}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return SafeArea(
         child: Container(
           decoration: const BoxDecoration(
@@ -28,11 +26,9 @@ class SurahDetailScreen extends StatelessWidget {
                 ),
               ),
               body: Center(
-                child: Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    child: Image.asset(imagePath),
-                  )
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: Image.asset(imagePath),
                 ),
               )),
         ));

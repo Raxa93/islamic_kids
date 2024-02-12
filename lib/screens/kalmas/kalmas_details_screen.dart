@@ -1,11 +1,10 @@
 
 import 'package:flutter/material.dart';
-import 'package:islamic_kids/configurations/size_config.dart';
 import 'package:islamic_kids/constants/app_colors.dart';
 import 'package:islamic_kids/constants/app_strings.dart';
 
 class KalmasDetail extends StatelessWidget {
-  int index;
+  final int index;
    KalmasDetail({Key? key,required this.index}) : super(key: key);
 
   @override
@@ -31,31 +30,38 @@ class KalmasDetail extends StatelessWidget {
             body: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // SizedBox(height: SizeConfig.screenHeight! * 0.05),
+                  const SizedBox(height: 50),
                           Text(AppStrings.kalmasData[index]['Name']!,style: TextStyle(
-                            fontSize: index == 4 || index == 5 ?SizeConfig.screenHeight! * 0.03 : SizeConfig.screenHeight! * 0.03,
+                            fontSize: 24,
+                            // index == 4 || index == 5 ?SizeConfig.screenHeight! * 0.03 : SizeConfig.screenHeight! * 0.03,
                             color: AppColors.kNavyBlueColor,
                             fontFamily: 'Gomgom'
                           ),),
+                  const SizedBox(height: 30),
                           Text(AppStrings.kalmasData[index]['UrduName']!,style: TextStyle(
-                            fontSize:index == 4 || index == 5 ?SizeConfig.screenHeight! * 0.03 : SizeConfig.screenHeight! * 0.05,
+                            fontSize: 22,
+                            // index == 4 || index == 5 ?SizeConfig.screenHeight! * 0.03 : SizeConfig.screenHeight! * 0.05,
                             fontWeight: FontWeight.bold,
                             color: AppColors.kNavyBlueColor,
                           ),),
+                  const SizedBox(height: 50),
                           // SizedBox(height: SizeConfig.screenHeight! * 0.04),
                           Text(AppStrings.kalmasData[index]['Dua']!,
                             textAlign: TextAlign.center
-                            ,style: TextStyle(
-                            fontSize: index == 4 || index == 5 ?SizeConfig.screenHeight! * 0.035 :SizeConfig.screenHeight! * 0.049,
+                            ,style:  const TextStyle(
+                            fontSize: 20,
+
                             fontWeight: FontWeight.bold,
                           ),),
+                  const SizedBox(height: 50),
                           Text(AppStrings.kalmasData[index]['Urdu']!,
                             textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: index == 4 || index == 5 ?SizeConfig.screenHeight! * 0.02 :SizeConfig.screenHeight! * 0.025,
+                          style:  TextStyle(
+                            fontSize:
+                            index == 4 || index == 5 ? 15 : 18,
                             fontWeight: FontWeight.bold
                           ),
                           ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamic_kids/constants/app_styles.dart';
 
-import '../../configurations/size_config.dart';
 
 
 class WadhuContent extends StatelessWidget {
@@ -23,38 +22,41 @@ class WadhuContent extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        SizedBox(
-          height:  SizeConfig.screenHeight! * 0.02,
-        ),
+        // SizedBox(
+        //   height:  SizeConfig.screenHeight! * 0.02,
+        // ),
         Text('Step $index', style: AppStyles.stepTitle),
-        SizedBox(
-          height: SizeConfig.screenHeight! * 0.02,
+        const SizedBox(
+          height: 40,
         ),
         Padding(
-          padding: EdgeInsets.only(left: index == 6 ? SizeConfig.screenWidth! * 0.02 : 0 ) ,
+          padding: EdgeInsets.only(left: index == 6 ? 5 : 0 ) ,
           child: Image.asset(
             img,
-            height: index == 6 ? SizeConfig.screenHeight! * 0.095 : SizeConfig.screenHeight! * 0.14,
+            fit: BoxFit.cover,
+            height:index == 6 ?  70 : 80
+            // index == 6 ? SizeConfig.screenHeight! * 0.095 : SizeConfig.screenHeight! * 0.14,
           ),
         ),
-        SizedBox(
-          height: SizeConfig.screenHeight! * 0.02,
+        const SizedBox(
+          height: 15,
         ),
         Text(title,
             textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.black,
+            style: const TextStyle(color: Colors.black,
                 fontFamily: 'Gomgom',
-                fontSize: SizeConfig.screenHeight! * 0.021),
+                wordSpacing: 1,
+                fontSize: 18),
 
         ),
-        SizedBox(
-          height: SizeConfig.screenHeight! * 0.016,
+        const SizedBox(
+          height: 15,
         ),
         Text(subTitle,
             textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.black,
+            style: const TextStyle(color: Colors.black,
 
-                fontSize: SizeConfig.screenHeight! * 0.025)),
+                fontSize: 17)),
       ],
     );
   }

@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../configurations/size_config.dart';
 
 
 class CustomWidgets {
   static Widget customCard(
       {required var firstColor,
-        required var height,
-        required var width,
+        required double height,
+        required double width,
       required var secondColor,
       required String iconPath,
       required String cardText,
@@ -25,7 +24,7 @@ class CustomWidgets {
                   color: Colors.grey.withOpacity(0.5),
                   spreadRadius: 5,
                   blurRadius: 7,
-                  offset: Offset(0, 3),
+                  offset: const Offset(0, 3),
               ),
             ],
             gradient: LinearGradient(
@@ -37,19 +36,20 @@ class CustomWidgets {
             border: Border.all(color: Colors.grey.withOpacity(0.5))
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
               iconPath,
-              width: SizeConfig.screenWidth! * 0.15,
-              height: SizeConfig.screenHeight! * 0.08,
+              width: 62,
+              height: 60,
+              fit: BoxFit.cover,
             ),
             Text(
               cardText,
-              style: TextStyle(
+              style: const TextStyle(
                   color: Colors.black,
                   fontFamily: 'Gomgom',
-                  fontSize: SizeConfig.screenHeight! * 0.022),
+                  fontSize: 18),
             )
           ],
         ),
@@ -64,14 +64,14 @@ class CustomWidgets {
       required String iconPath,
       required String title,
       required String subTitle,
-        required var height,
-        required var width,
+        required double height,
+        required double width,
         required bool hasIcon,
       required var onTap}) {
     return InkWell(
       onTap: onTap,
       child: Container(
-         margin: EdgeInsets.all(SizeConfig.screenWidth! * 0.01),
+         margin: const EdgeInsets.all(5.0),
         height:height ,
         width: width ,
         decoration: BoxDecoration(
@@ -84,19 +84,19 @@ class CustomWidgets {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            const SizedBox(width: 10),
+          hasIcon ?  Image.asset(iconPath,width: 50,height: 50)
 
-          hasIcon ?  Image.asset(iconPath,width: SizeConfig.screenWidth! * 0.18,height: SizeConfig.screenHeight! * 0.045)
-
-              : SizedBox.shrink(),
-            SizedBox(width: SizeConfig.screenWidth! * 0.02),
+              : const SizedBox.shrink(),
+            const SizedBox(width: 20),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(title,style: TextStyle(
-                  fontSize: SizeConfig.screenHeight! * 0.024,
+                Text(title,style: const TextStyle(
+                  fontSize: 18,
                   fontFamily: 'Gomgom'
-                ),), Text(subTitle,style: TextStyle(fontSize: SizeConfig.screenHeight! * 0.023),)],
+                ),), Text(subTitle,style: const TextStyle(fontSize: 17),)],
             )
           ],
         ),
@@ -110,15 +110,15 @@ class CustomWidgets {
         required String iconPath,
         required String title,
         required String subTitle,
-        required var height,
-        required var width,
+        required double height,
+        required double width,
         required bool hasIcon,
         required var onTap}) {
     return InkWell(
       onTap: onTap,
       child: Container(
-        margin: EdgeInsets.all(SizeConfig.screenWidth! * 0.05),
-        height:height ,
+        margin: const EdgeInsets.all(10),
+        height: height ,
         width: width ,
         alignment: Alignment.center,
         decoration: BoxDecoration(
@@ -132,20 +132,20 @@ class CustomWidgets {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
 
-            hasIcon ?  Icon(
+            hasIcon ?  const Icon(
               Icons.add,
               color: Colors.red,
               size: 50,
-            ) : SizedBox.shrink(),
+            ) : const SizedBox.shrink(),
             // SizedBox(width: SizeConfig.screenWidth! * 0.08),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(title,style: TextStyle(
-                    fontSize: SizeConfig.screenHeight! * 0.04,
+                Text(title,style: const TextStyle(
+                    fontSize: 20,
                     fontFamily: 'Gomgom'
-                ),), Text(subTitle,style: TextStyle(fontSize: SizeConfig.screenHeight! * 0.03),)],
+                ),), Text(subTitle,style: const TextStyle(fontSize: 18),)],
             )
           ],
         ),
